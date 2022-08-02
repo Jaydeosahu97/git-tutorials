@@ -2,55 +2,68 @@
 staging area contains those files which are ready to commit
 below are the commands for git :
 
-```
-    1. git status - checks the current status of your file.
+`git status`
+checks the current status of your file.
+
+  untracked----unmodified----modified----staged
+
+`git add <file-name>`
+
+to add the file in staging area.
+
+`git add .`
+
+it adds all the files in staging area
+
+`git commit -m '<enter-your-comment>'`
+
+this commmand is used to commit the changes in your repository
+
+`git init`
+
+It initialises the folder as repository
+
+`git commit -a -m '<enter-your-comment>'`
+
+this command will perform staging and commit simulatneously.
+
+`git diff `
+
+for checking the changes been made in your repos
     
-    untracked----unmodified----modified----staged
+`git log -p`
 
-    2. git add <file-name> - to add the file in staging area.
+along with previous commit it performs 'git diff' as well
 
-    3. git add .
-    it adds all the files in staging area
+`git log -p -n`
 
-    4. git commit -m 'enter-your-comment'
-    this commmand is used to commit the changes in your repository
+it shows only the last n changes & commit
 
-    5. git init
-    It initialises the folder as repository
+`git log --stat`
 
-    6. git commit -a -m 'enter-your-comment'
-    this command will perform staging and commit simulatneously.
+shows simplified form of 'git diff'. shows how many insertion and deletion are there
+   * git log --pretty=oneline
+   * git log --pretty=short
+   * git log --since=2.days (shows changes been made since 2 days. 2 and days can be replace with any number and week or year)
 
-    7. git diff 
-    for checking the changes been made in your repos
+`git checkout --<file-name> `
+
+This command will bring previous commited file.
+
+`git checkout -f`
+
+This command will be applied to all the files.
+
+`git config --global alias <alias-name> <actual-command>`
+
+this command will create alias to commands provided
+
+`git checkout -b '<name-of-branch>' `
+
+this command will create new branch
+
+`git merge <merge-name> `
     
-    8. git log -p
-    along with previous commit it performs 'git diff' as well
-
-    9. git log -p -n
-    it shows only the last n changes & commit
-
-    10. git log --stat
-    shows simplified form of 'git diff'. shows how many insertion and deletion are there
-
-    * git log --pretty=oneline
-    * git log --pretty=short
-    * git log --since=2.days (shows changes been made since 2 days. 2 and days can be replace with any number and week or year)
-
-    11. git checkout --<file-name> 
-    this command will bring previous commited file
-
-    12. git checkout -f
-    this command will be applied to all the files
-
-    13. git config --global alias <alias-name> <actual-command>
-    this command will create alias to commands provided
-
-    14. git checkout -b 'name-of-branch'
-    this command will create new branch
-
-    15. git merge <merge-name> 
-    This merges the specified branch with its parent branch
-```
+This merges the specified branch with its parent branch
 
 That's all for now
